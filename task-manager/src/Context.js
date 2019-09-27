@@ -7,7 +7,7 @@ const reducer = (state,action) => {
         case 'DELETE_CONTACT':
             return {
                 ...state,
-                tasks:state.tasks.filter(contact => contact.id !== action.payload)
+                tasks:state.tasks.filter(task => task.id !== action.payload)
             }
         default:
             return state
