@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import {Container,Card,CardBody,CardTitle,ListGroup,ListGroupItem} from 'reactstrap'
 import {Consumer} from '../Context'
+import axios from 'axios'
  export default class Task extends Component {
     onDelete =  (id,dispatch)  => {
-        dispatch({
-            type:'DELETE_CONTACT',
-            payload:id
-        })
+        axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+         .then(res => {
+            dispatch({
+                type:'DELETE_CONTACT',
+                payload:id
+            })
+         })
+
     }
     render() {
      return (
