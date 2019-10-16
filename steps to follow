@@ -1,0 +1,22 @@
+create-react-app appname
+we will check app has properly installed or not with command (npm start)
+edit App.js file 
+we will install golabal dependencies react-router-dom reactstrap axios redux redux-thunk(http req res middleware) react-redux(it behaves like a consumer)
+we will run the app again npm start
+create folder for components
+create folder for actions and reducers
+create file store.js in the src dir (where your apps intialstate will stay)
+edit app.js ( and create a provider jsx element and it should be treated as parent element)
+and give provider element a prop name store and provide the local store file
+creating a root reducer file where we will be combining all the reducers at one using combineReducer method
+create a normal reducer function with default state(to stay away from errors)
+creating a type file according to the nature of app and it will be created in action folder(types will be a translator or a communicator between reducer and action)
+create an action file (we will be dispatching type and the payload we get from server to the reducer)
+create a reducer file (where reducer with switch the case according to the type and payload and it will be updated in the initial state)
+now let's go to components folder 
+according to the nature of the app we will select a component file where we want to render data fron server(using connect)
+for using connect first import it from react-redux
+then directly go to the end of the file and declare connect()
+connect first param will be if you want data then mapStateToProps or set it to null
+and second param will be action function import it from the action folder
+and then use the mapstatetoprops data as a props inside react app
